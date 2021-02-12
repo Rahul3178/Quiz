@@ -10,7 +10,7 @@ package quiz;
  * @author Rahul
  */
 public class Start extends javax.swing.JFrame {
-
+public static int total=0;
     /**
      * Creates new form Start
      */

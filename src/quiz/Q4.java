@@ -5,6 +5,9 @@
  */
 package quiz;
 
+import javax.swing.JOptionPane;
+import static quiz.Start.total;
+
 /**
  *
  * @author Rahul
@@ -163,6 +166,26 @@ public class Q4 extends javax.swing.JFrame {
     }//GEN-LAST:event_rb1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+        if(rb1.isSelected())
+      {
+          total+=0;
+      }else if(rb2.isSelected())
+      {
+          total+=0;
+      }
+      else if(rb3.isSelected())
+      {
+          total+=0;
+      }else if(rb4.isSelected())
+      {
+          total+=1;
+      }
+      else{
+          JOptionPane.showMessageDialog(this,"Plese answer the question");
+         new Q4().setVisible(true);
+      }
+         if(rb1.isSelected() ||rb2.isSelected()||rb3.isSelected()||rb4.isSelected())
         next.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed

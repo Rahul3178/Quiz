@@ -6,6 +6,7 @@
 package quiz;
 
 import javax.swing.JOptionPane;
+import static quiz.Start.total;
 
 /**
  *
@@ -16,6 +17,7 @@ public class Q5 extends javax.swing.JFrame {
     /**
      * Creates new form Q5
      */
+   
     public Q5() {
         initComponents();
         setLocationRelativeTo(null);
@@ -158,7 +160,34 @@ public class Q5 extends javax.swing.JFrame {
     }//GEN-LAST:event_rb4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       JOptionPane.showMessageDialog(this,"Result");
+       String err="Please Select your answer";
+       
+        if(rb1.isSelected())
+      {
+          total+=0;
+      }else if(rb2.isSelected())
+      {
+          total+=0;
+      }
+      else if(rb3.isSelected())
+      {
+          total+=0;
+      }else if(rb4.isSelected())
+      {
+          total+=1;
+      }
+      else{
+          JOptionPane.showMessageDialog(this,"Plese answer the question");
+            new Q5().setVisible(true);
+            dispose();
+      }
+         if(rb1.isSelected() ||rb2.isSelected()||rb3.isSelected()||rb4.isSelected()){
+            String Final ="The final result is:";
+           JOptionPane.showMessageDialog(this, total, Final , HEIGHT);
+           new Start().setVisible(true);
+ 
+         }
+       // JOptionPane.showMessageDialog(this,"Result");
        dispose();
     
     }//GEN-LAST:event_jButton1ActionPerformed
